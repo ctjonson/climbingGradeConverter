@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+    opacity: none;
+
+}
+
+.center {
+    text-align: center;
+}
+
+.imgcenter {
+
+    width: 75%;
+    margin: auto;
+
+}
+
+
+
+.myDiv {
+    position: relative;
+    z-index: 1;
+}
+
+.myDiv:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('https://cdn.shopify.com/s/files/1/0031/2577/2361/products/20140915_SquareSpace0675-Edit_2048x.jpg?v=1575397708') center center;
+    opacity: .4;
+}
