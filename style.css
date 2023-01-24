@@ -22,7 +22,7 @@ h1 {
     z-index: 1;
 }
 
-.myDiv:before {
+.myDiv::before {
     content: "";
     position: absolute;
     z-index: -1;
