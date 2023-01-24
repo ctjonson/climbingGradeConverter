@@ -1,13 +1,35 @@
 
+// Get the input field
+var input = document.getElementById("gradeentry");
+
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function (event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.key === "Enter") {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        document.getElementById("button").click();
+    }
+});
 
 // Get the modal
 var modal = document.getElementById('myModal');
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById('myImg1, myImg2');
+var img1 = document.getElementById('myImg1');
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
-img.onclick = function () {
+img1.onclick = function () {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+var img2 = document.getElementById('myImg2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img2.onclick = function () {
     modal.style.display = "block";
     modalImg.src = this.src;
     captionText.innerHTML = this.alt;
@@ -37,15 +59,25 @@ const french = ["1", "2",
 
 function gradeConvert() {
 
-    const grade = document.getElementById("gradeentry").value;
+    var grade = document.getElementById("gradeentry").value;
 
+    if (!grade.includes('5.')) {
+
+        grade = '5.' + grade
+
+    }
+
+    var div = document.getElementById('gradereveal');
     if (yds.includes(grade, 0)) {
+
         const yds_grade = yds.indexOf(grade);
         const fr_grade = french.at(yds_grade);
-        window.alert(fr_grade);
+        document.getElementById('gradeanswer').textContent = fr_grade
+
+
     } else {
 
-        window.alert("Please enter a YDS climbing grade!")
+        document.getElementById('gradeanswer').textContent = 'Please enter a YDS grade!'
 
     }
 }

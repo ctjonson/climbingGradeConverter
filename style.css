@@ -1,36 +1,67 @@
 h1 {
     text-align: center;
-    opacity: none;
+    font-family: serif;
+    font-size: 4vw;
 
 }
 
 .center {
     text-align: center;
-}
-
-.imgcenter {
-
-    width: 75%;
-    margin: auto;
 
 }
+
+.fixedpos {
+
+    position: absolute;
+    bottom: 100px;
+
+
+}
+
 
 body {
 
-    background-color: rgb(47, 119, 226);
+    background-color: rgb(187, 214, 255);
 
 }
 
-.imgmain {
+form {
 
+    font-size: 2vw;
+
+}
+
+#button {
+
+    font-weight: bold;
+    size: 2vw;
+    background-color: #4CAF50;
+    border: 1px solid #000000;
+    color: white;
+    text-align: center;
+    text-decoration: none;
     border-radius: 15px;
 
 
 }
 
+#button:hover {
+
+    opacity: .7;
+
+}
+
+#button:active {
+
+    background-color: #006103;
+
+}
+
+
+
 #myImg1,
 #myImg2 {
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -124,4 +155,22 @@ body {
     .modal-content {
         width: 100%;
     }
+}
+
+#gradeanswer {
+
+    font-size: large;
+    color: rgb(0, 107, 0);
+    font-weight: 500;
+    font-family: cursive;
+    height: 50px;
+    margin-top: 50px;
+
+
+}
+
+#gradereveal {
+
+    height: 150px;
+
 }
